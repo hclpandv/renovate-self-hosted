@@ -7,7 +7,7 @@ module.exports = {
   onboardingConfig: {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-      "github>hclpandv/renovate-config"
+      "github>vikidevoorg/renovate-config"
     ]
   },
   platform: 'github',
