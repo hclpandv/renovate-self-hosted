@@ -3,7 +3,7 @@ module.exports = {
   onboarding: true,
   username: 'renovate-release',
   gitAuthor: 'VikiRenovate Bot <bot@renovateapp.com>',
-  repositories: ['hclpandv/k8s-lab', 'hclpandv/my-vagrant-projects'],
+  repositories: ['vikidevoorg/python-monorepo', 'hclpandv/my-vagrant-projects'],
   onboardingConfig: {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
