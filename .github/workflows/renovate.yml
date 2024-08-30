@@ -6,7 +6,7 @@ on:
       - '**.md'
       - 'renovate.json'
   push:
-    branches: [ main ]
+    branches: [ refactor ]
     paths-ignore: 
       - '**.md'
       - 'renovate.json'
@@ -54,12 +54,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
       - name: Request a Github token
         id: action-github-app-token
-        uses: getsentry/action-github-app-token@v3.0.0
+        uses: actions/create-github-app-token@7bfa3a4717ef143a604ee0a99d859b8886a96d00
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
+
       - id: renovate-setup
         run: |
           if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
@@ -67,6 +69,7 @@ jobs:
           else
             echo "DRY_RUN=${{ inputs.dryRun }}" >> $GITHUB_OUTPUT
           fi
+          
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@0c94129d48b4e92addf23686b8a735b3057a0448 # v40.2.5
         with:
