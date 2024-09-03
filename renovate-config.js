@@ -14,6 +14,7 @@ module.exports = {
   },
   platform: 'github',
   forkProcessing: "enabled",
+  dependencyDashboardAutoclose: true,
   packageRules: [
     {
       description: 'lockFileMaintenance',
