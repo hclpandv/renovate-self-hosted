@@ -1,8 +1,8 @@
 module.exports = {
   branchPrefix: 'renovate/',
   onboarding: true,
-  username: 'renovate-release',
-  gitAuthor: 'VikiRenovate Bot <bot@renovateapp.com>',
+  //username: 'renovate-release',
+  //gitAuthor: 'VikiRenovate Bot <bot@renovateapp.com>',
   repositories: [
     'vikidevoorg/python-monorepo'
   ],
