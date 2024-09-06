@@ -56,7 +56,7 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: Request a Github token
         id: action-github-app-token
-        uses: getsentry/action-github-app-token@v3.0.0
+        uses: getsentry/action-github-app-token@a0061014b82a6a5d6aeeb3b824aced47e3c3a7ef # v3.1.0
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
